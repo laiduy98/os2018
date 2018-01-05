@@ -1,0 +1,33 @@
+echo hello world		hello world
+
+
+passwd				Changing password for laiduy98.   (current) UNIX password:    
+ passwd: Authentication token manipulation error        passwd: password unchanged 
+
+
+date				Fri Jan  5 11:00:29 DST 2018   
+
+hostname                        DuyLaiPhotography   
+
+arch				x86_64 
+
+uname -a                        Linux DuyLaiPhotography 4.4.0-43-Microsoft #1-Microsoft Wed Dec 31 14:42:53 PST 2014 x86_64 x86_64 x86_64 GNU/Linux 
+
+dmesg				dmesg: read kernel buffer failed: Function not implemented
+
+uptime				11:07:15 up 24 min,  0 users,  load average: 0.52, 0.58, 0.59  
+
+whoami				laiduy98
+
+who				nothing
+
+who am i                        nothing
+
+id				uid=1000(laiduy98) gid=1000(laiduy98) groups=1000(l
+				aiduy98),4(adm),20(dialout),24(cdrom),25(floppy),27(sudo),29(audio),30(dip),44(video),46(plugdev),109(netdev),110(lxd)
+
+last                            wtmp begins Fri Sep 22 23:15:02 2017
+
+finger				No one logged on.   
+
+w                               11:12:10 up 29 min,  0 users,  load average: 0.52, 0.58, 0.59
