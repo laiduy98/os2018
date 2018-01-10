@@ -1,0 +1,18 @@
+laiduy98@DuyLaiPhotography:~$ ls | grep 'list'		//nothing because i dont have any file name 'list'
+laiduy98@DuyLaiPhotography:~$ cat < /etc/passwd | wc -l
+41
+laiduy98@DuyLaiPhotography:~$ free -h  |awk '/Mem\:/ {print $2}'
+7.7G
+laiduy98@DuyLaiPhotography:~$ cat /proc/cpuinfo | grep 'core'
+core id		: 0
+cpu cores	: 4
+core id		: 1
+cpu cores	: 4
+core id		: 2
+cpu cores	: 4
+core id		: 3
+cpu cores	: 4
+laiduy98@DuyLaiPhotography:~$ find Pictures -name "*.jpg" |wc -l
+1
+
+
