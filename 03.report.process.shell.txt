@@ -1,0 +1,72 @@
+laiduy98@DuyLaiPhotography:~$ ps -f
+UID        PID  PPID  C STIME TTY          TIME CMD
+laiduy98  1734  1506  0 14:29 pts/1    00:00:00 bash
+laiduy98  1773  1734  0 14:31 pts/1    00:00:00 ps -f
+laiduy98@DuyLaiPhotography:~$ gnome-calculator 
+
+** (gnome-calculator:1774): WARNING **: currency.vala:459: Couldn't download IMF currency rate file: Error resolving “www.imf.org”: Name or service not known
+
+** (gnome-calculator:1774): WARNING **: currency.vala:459: Couldn't download ECB currency rate file: Error resolving “www.ecb.europa.eu”: Name or service not known
+laiduy98@DuyLaiPhotography:~$ ps aux | grep -i gnome-calculator | awk {'print$2'}
+1806
+1829
+laiduy98@DuyLaiPhotography:~$ cat /proc/1629/status 
+cat: /proc/1629/status: No such file or directory
+laiduy98@DuyLaiPhotography:~$ cat /proc/1806/status 
+Name:	gnome-calculato
+Umask:	0022
+State:	S (sleeping)
+Tgid:	1806
+Ngid:	0
+Pid:	1806
+PPid:	1795
+TracerPid:	0
+Uid:	1000	1000	1000	1000
+Gid:	1000	1000	1000	1000
+FDSize:	256
+Groups:	4 24 27 30 46 118 128 1000 
+NStgid:	1806
+NSpid:	1806
+NSpgid:	1806
+NSsid:	1795
+VmPeak:	  848392 kB
+VmSize:	  848392 kB
+VmLck:	       0 kB
+VmPin:	       0 kB
+VmHWM:	   49608 kB
+VmRSS:	   49548 kB
+RssAnon:	   16268 kB
+RssFile:	   32568 kB
+RssShmem:	     712 kB
+VmData:	   73352 kB
+VmStk:	     132 kB
+VmExe:	     376 kB
+VmLib:	   68980 kB
+VmPTE:	     648 kB
+VmPMD:	      16 kB
+VmSwap:	       0 kB
+HugetlbPages:	       0 kB
+Threads:	4
+SigQ:	0/30919
+SigPnd:	0000000000000000
+ShdPnd:	0000000000000000
+SigBlk:	0000000000000000
+SigIgn:	0000000000001000
+SigCgt:	0000000180000000
+CapInh:	0000000000000000
+CapPrm:	0000000000000000
+CapEff:	0000000000000000
+CapBnd:	0000003fffffffff
+CapAmb:	0000000000000000
+NoNewPrivs:	0
+Seccomp:	0
+Cpus_allowed:	f
+Cpus_allowed_list:	0-3
+Mems_allowed:	00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000001
+Mems_allowed_list:	0
+voluntary_ctxt_switches:	69
+nonvoluntary_ctxt_switches:	17
+laiduy98@DuyLaiPhotography:~$ kill -STOP 1806
+laiduy98@DuyLaiPhotography:~$ kill -CONT 1806
+laiduy98@DuyLaiPhotography:~$ kill -KILL 1806
+
