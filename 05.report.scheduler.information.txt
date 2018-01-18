@@ -1,0 +1,7 @@
+laiduy98@DuyLaiPhotography:~$ cat /proc/sched_debug | awk '/systemd / {print $4}' 
+169
+96
+83418
+laiduy98@DuyLaiPhotography:~$ cat /proc/1/sched | awk '/nr_switches/ {print $3}'
+83763
+
