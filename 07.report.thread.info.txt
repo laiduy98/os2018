@@ -1,0 +1,6 @@
+laiduy98@DuyLaiPhotography:~/os2018$ ps -A | grep firefox
+ 3353 ?        00:01:17 firefox
+laiduy98@DuyLaiPhotography:~/os2018$ ps -o nlwp 3353
+NLWP
+  62
+
