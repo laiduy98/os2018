@@ -20,11 +20,11 @@ sem_t sem;
 
 
 
-void make(item *i) {
+void produce(item *i) {
 	while ((first + 1) % BUFFER_SIZE == last) {
 	
 	}
-	wait(&sem);
+	sem_wait(&sem);
 	memcpy(&buffer[first], i, sizeof(item));
 	first = (first + 1) % BUFFER_SIZE;
 	sem_post(&sem);
@@ -35,7 +35,7 @@ item *consume() {
 	while (first == last) {
 		
 	}
-	wait(&sem);
+	sem_wait(&sem);
 	memcpy(i, &buffer[last], sizeof(item));
 	last = (last + 1) % BUFFER_SIZE;
 	sem_post(&sem);
@@ -47,17 +47,17 @@ void *producer(void *param){
 	i1.type = '0';
 	i1.amount = 5 ;
 	i1.unit = '0';
-	make(&i1);
+	produce(&i1);
 	printf("Log values of first = %d, last = %d \n", first,last);
 	i2.type = '1';
 	i2.amount = 10;
 	i2.unit = '1';
-	make(&i2);
+	produce(&i2);
 	printf("Log values of first = %d, last = %d \n", first,last);
 	i3.type = '1';
 	i3.amount = 20;
 	i3.unit = '1';
-	make(&i3);
+	produce(&i3);
 	printf("Log values of first = %d, last = %d \n", first,last);
 	
 }
